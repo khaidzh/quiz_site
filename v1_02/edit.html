@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BQuiz Создание</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="header.css">
+	<link rel="stylesheet" type="text/css" href="edit.css">
+</head>
+<body onselectstart="return false">
+	<div class="header">
+		<div class="logo">
+			<a href="index.html"><img src="images/logo.png" class="logo"></a>
+		</div>
+		<div class="nav">
+			<div class="menuItem">
+				<a href="play.html"><img src="images/play.png"><br>Play</a>
+			</div>
+			<div class="menuItem">
+				<a href="edit.html"><img src="images/create.png"><br>Create</a>
+			</div>
+			<div class="menuItem">
+				<a href="catalog.html"><img src="images/catalog.png"><br>Catalog</a>
+			</div>
+			<div class="menuItem">
+				<a href="faq.html"><img src="images/faq.png"><br>F.A.Q</a>
+			</div>
+		</div>
+		<div class="nav profile">
+			<div class="menuItem">
+				<a href="#"><img src="images/profile.png"><br>Log in</a>
+			</div>
+		</div>
+	</div>
+	<div class="edit">
+		<div class="edit_title">
+			Название: <input type="text" id="title">
+		</div>
+		<div class="edit_question">
+			<div class="edit_table">
+				<table>
+					<tr>
+						<td style="opacity: 1">Tема 1<br><input type="text" id="0"></td>
+						<td id="1" onclick="preview(1)">100</td>
+						<td id="2" onclick="preview(2)">200</td>
+						<td id="3" onclick="preview(3)">300</td>
+						<td id="4" onclick="preview(4)">400</td>
+						<td id="5" onclick="preview(5)">500</td>
+					</tr>
+					<tr>
+						<td style="opacity: 1">Тема 2<br><input type="text" id="6"></td>
+						<td id="7" onclick="preview(7)">100</td>
+						<td id="8" onclick="preview(8)">200</td>
+						<td id="9" onclick="preview(9)">300</td>
+						<td id="10" onclick="preview(10)">400</td>
+						<td id="11" onclick="preview(11)">500</td>
+					</tr>
+					<tr>
+						<td style="opacity: 1">Тема 3<br><input type="text" id="12"></td>
+						<td id="13" onclick="preview(13)">100</td>
+						<td id="14" onclick="preview(14)">200</td>
+						<td id="15" onclick="preview(15)">300</td>
+						<td id="16" onclick="preview(16)">400</td>
+						<td id="17" onclick="preview(17)">500</td>
+					</tr>
+					<tr>
+						<td style="opacity: 1">Тема 4<br><input type="text" id="18"></td>
+						<td id="19" onclick="preview(19)">100</td>
+						<td id="20" onclick="preview(20)">200</td>
+						<td id="21" onclick="preview(21)">300</td>
+						<td id="22" onclick="preview(22)">400</td>
+						<td id="23" onclick="preview(23)">500</td>
+					</tr>
+					<tr>
+						<td style="opacity: 1">Тема 5<br><input type="text" id="24"></td>
+						<td id="25" onclick="preview(25)">100</td>
+						<td id="26" onclick="preview(26)">200</td>
+						<td id="27" onclick="preview(27)">300</td>
+						<td id="28" onclick="preview(28)">400</td>
+						<td id="29" onclick="preview(29)">500</td>
+					</tr>
+				</table>
+			</div>
+			<div class="edit_preview">
+				Тип:
+				<select id="type">
+					<option id="none" value="none">нет</option>
+					<option id="open" value="open">открытый</option>
+					<option id="choice" value="choice">выбор</option>
+					<option id="order" value="order">порядок</option>
+				</select>
+				<div id="toggle">
+					<input type="text" id="text" style="width: 600px;" placeholder="Текст вопроса"><br>
+					<input type="text" id="answer"><br>
+					<input type="text" id="option_a"><br>
+					<input type="text" id="option_b" placeholder="2)"><br>
+					<input type="text" id="option_c" placeholder="3)"><br>
+					<input type="text" id="option_d" placeholder="4)"><br>
+				</div>
+				<br>
+				<button id="edit_question">Изменить</button>
+				<button id="cancel_question">Отмена</button>
+				<button id="save_question">Сохранить</button>
+			</div>
+		</div>
+		<button id="save_all">Сохранить Quiz</button>
+	</div>
+	<script type="text/javascript" src="edit.js" onload="startEdit()"></script>
+</body>
+</html>

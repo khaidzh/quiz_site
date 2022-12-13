@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BQuiz Игра</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="header.css">
+	<link rel="stylesheet" type="text/css" href="play.css">
+	<link rel="stylesheet" type="text/css" href="timer.css">
+</head>
+<body onselectstart="return false">
+	<div class="header">
+		<div class="logo">
+			<a href="index.html"><img src="images/logo.png" class="logo"></a>
+		</div>
+		<div class="nav">
+			<div class="menuItem">
+				<a href="play.html"><img src="images/play.png"><br>Play</a>
+			</div>
+			<div class="menuItem">
+				<a href="edit.html"><img src="images/create.png"><br>Create</a>
+			</div>
+			<div class="menuItem">
+				<a href="catalog.html"><img src="images/catalog.png"><br>Catalog</a>
+			</div>
+			<div class="menuItem">
+				<a href="faq.html"><img src="images/faq.png"><br>F.A.Q</a>
+			</div>
+		</div>
+		<div class="nav profile">
+			<div class="menuItem">
+				<a href="#"><img src="images/profile.png"><br>Log in</a>
+			</div>
+		</div>
+	</div>
+	<div class="play">
+		<div class="play_settings">
+			Quiz: <input type="file" id="file" onchange="readFile(this)"><br>
+			Количество игроков:
+			<select>
+				<option value="2" selected>2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</select><br>
+			Имена игроков:<br>
+			<div class="p1"><input type="text" id="player1"></div>
+			<div class="p2"><input type="text" id="player2"></div>
+			<div class="p3"><input type="text" id="player3"></div>
+			<div class="p4"><input type="text" id="player4"></div>
+			<button id="confirm">OK</button>
+		</div>
+		<div class="box">
+			<div id="scores"><span>Счёт</span><hr></div>
+
+			<div class="play_table">
+				<table>
+					<tr>
+						<td id="0" class="theme"></td>
+						<td id="1">100</td>
+						<td id="2">200</td>
+						<td id="3">300</td>
+						<td id="4">400</td>
+						<td id="5">500</td>
+					</tr>
+					<tr>
+						<td id="6" class="theme"></td>
+						<td id="7">100</td>
+						<td id="8">200</td>
+						<td id="9">300</td>
+						<td id="10">400</td>
+						<td id="11">500</td>
+					</tr>
+					<tr>
+						<td id="12" class="theme"></td>
+						<td id="13">100</td>
+						<td id="14">200</td>
+						<td id="15">300</td>
+						<td id="16">400</td>
+						<td id="17">500</td>
+					</tr>
+					<tr>
+						<td id="18" class="theme"></td>
+						<td id="19">100</td>
+						<td id="20">200</td>
+						<td id="21">300</td>
+						<td id="22">400</td>
+						<td id="23">500</td>
+					</tr>
+					<tr>
+						<td id="24" class="theme"></td>
+						<td id="25">100</td>
+						<td id="26">200</td>
+						<td id="27">300</td>
+						<td id="28">400</td>
+						<td id="29">500</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="open" class="open_question">
+				<div class="question_text"></div>
+				<div class="question_input">
+					<input id="answer" type="text" placeholder="Введите свой ответ..."><br>
+					<button id="submit_answer" onclick="submitAnswer()">Submit</button>
+				</div>
+			</div>
+
+			<div id="choice" class="choice_question">
+				<div class="question_text"></div>
+				<div id="possible_answers"></div>
+			</div>
+
+			<div id="order" class="order_question">
+				<div class="question_text"></div>
+				<div id="dropzone" ondragover="onDragOver(event)" ondrop="onDrop(event)"></div>
+				<button id="submit_order" onclick="submitOrder()">Submit</button>
+			</div>
+
+			<div class="tools">
+				<div class="timer"><div id="app"></div></div>
+				<div id="hint"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="timer.js"></script>
+	<script type="text/javascript" src="play_order.js"></script>
+	<script type="text/javascript" src="play.js" onload="startPlay()"></script>
+</body>
+</html>

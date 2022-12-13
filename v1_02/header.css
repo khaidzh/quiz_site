@@ -1,0 +1,59 @@
+.header {
+	background-color: #3a28a7;
+	font-size: 0.4rem;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 150px 1fr 150px;
+}
+
+.logo {
+	width: 150px;
+	height: 60px;
+}
+
+.nav {
+	background-color: inherit;
+	display: flex;
+	align-items: center;
+}
+
+.menuItem {
+	margin-left: 20px;
+	margin-right: 20px;
+	text-align: center;
+}
+
+.menuItem a {
+	text-decoration: none;
+	color: white;
+	opacity: 0.6;
+	transition: opacity .1s linear;
+}
+
+.menuItem a:hover {
+	opacity: 1;
+}
+
+.menuItem a::after {
+	display: block;
+	content: "";
+	background-color: white;
+	width: 100%;
+	height: 2px;
+	border-radius: 2px;
+	opacity: 0;
+	transition: opacity .1s linear;
+}
+
+.menuItem a:hover::after {
+	opacity: 1;
+}
+
+.menuItem img {
+	height: 32px;
+	width: 32px;
+}
+
+.profile {
+	justify-content: right;
+}

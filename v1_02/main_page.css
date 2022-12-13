@@ -1,0 +1,10 @@
+.main_page {
+	width: 100%;
+	padding: 50px 150px 0px 150px;
+	text-indent: 0;
+	list-style-position: inside;
+}
+
+.main_page ul {
+	padding-left: 0.5em;
+}

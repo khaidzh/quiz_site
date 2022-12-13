@@ -1,0 +1,70 @@
+.result {
+	text-align: center;
+	background-color: #eeeeee;
+	height: calc(100vh - 60px);
+}
+
+.top-picture {
+	background-image: url(images/confetti.png), linear-gradient(to bottom, #5c47e7, #a144ae);
+	background-size: 64px;
+	background-repeat: repeat;
+	background-clip: border-box;
+	height: 192px;
+}
+
+#pedestal {
+	width: 128px;
+	height: 128px;
+	margin: 20px;
+}
+
+.party-popper {
+	width: 96px;
+	height: 96px;
+	margin-bottom: 20px;
+}
+
+table {
+	background-color: white;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+}
+
+thead {
+	color: #414b96;
+}
+
+tbody {
+	color: #333333;
+}
+
+tr.result__line-color-0 {
+	background-color: #f3f3f3;
+}
+
+tr:first-child {
+	border-top: 1px solid #aaaaaa;
+}
+
+tr {
+	border-bottom: 1px solid #aaaaaa;
+}
+
+td {
+	text-align: center;
+	vertical-align: middle;
+	height: 80px;
+}
+
+td.result__player-name {
+	text-align: left;
+	padding-left: 1em;
+	width: calc(100vw - 800px);
+}
+
+td img {
+	height: 64px;
+	width: 64px;
+}

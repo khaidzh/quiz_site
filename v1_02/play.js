@@ -18,7 +18,7 @@ var timer
 var currentQuestionId
 var numOfMoves
 var numOfTries
-var numOfNoneQuestions
+var numOfNotNoneQuestions
 var maxNumOfTurns
 var followLinkOnlyWithConsent
 
@@ -33,7 +33,7 @@ function startPlay() {
 	isFileInvalid = true
 	numOfMoves = 0
 	numOfTries = 0
-	numOfNoneQuestions = 0
+	numOfNotNoneQuestions = 0
 	followLinkOnlyWithConsent = false
 }
 
@@ -69,7 +69,7 @@ function readFile(input) {
 				questions[i].type = 'none'
 				continue
 			}
-			numOfNoneQuestions++
+			numOfNotNoneQuestions++
 			let line = lines[i].split('|')
 			questions[i].type = line[0]
 			questions[i].text = line[1]
@@ -96,9 +96,9 @@ confirm$.addEventListener('click', async () => {
 		return
 	}
 	numOfPlayers = Number(document.querySelector('.play_settings select').value)
-	maxNumOfTurns = Math.floor(numOfNoneQuestions / numOfPlayers) * numOfPlayers
+	maxNumOfTurns = Math.floor(numOfNotNoneQuestions / numOfPlayers) * numOfPlayers
 	if (maxNumOfTurns < 2) {
-		alert('Small number of none questions')
+		alert('Small number of questions')
 		return
 	}
 	if (document.getElementById('player1').value === '') {

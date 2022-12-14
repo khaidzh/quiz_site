@@ -9,7 +9,6 @@ function o(i) {
 
 var info = decodeURIComponent(location.search.substr(1)).split('&');
 var numOfPlayers = info[1]
-console.log(info)
 
 var lines = document.querySelector('tbody')
 for (var i = 0; i < numOfPlayers; i++) {
